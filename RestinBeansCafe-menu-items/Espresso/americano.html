@@ -1,0 +1,422 @@
+<!DOCTYPE html> <!-- tells the browser this is a modern HTML page -->
+<html lang="en"> <!-- the page language is English -->
+
+<head> <!-- information about the page; nothing here shows on screen -->
+    <meta charset="UTF-8"> <!-- lets accents and symbols display correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- makes the page scale properly on phones -->
+    <title>Menu | Rest in Beans</title> <!-- the text shown in the browser tab -->
+    <link rel="stylesheet" href="americano.css"> <!-- loads our own styles from americano.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Permanent+Marker&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet"> <!-- loads the Google Fonts used on the page -->
+</head>
+
+<body> <!-- everything you can see on the page goes inside body -->
+
+    <!-- Top bar: the logo plus the main links to other pages -->
+    <nav class="navbar">
+        <a href="index2.0.html"><img src="images/Logo.png" class="logo" alt="Rest in Beans Cafe"></a> <!-- the logo links back to the home page -->
+        <a href="menu.html">MENU</a> <!-- link to the menu page -->
+        <a href="about.html">ABOUT</a> <!-- link to the about page -->
+        <a href="contact.html">CONTACTS</a> <!-- link to the contacts page -->
+    </nav>
+
+    <main> <!-- the plain cream centre column; the pattern stays at the edges -->
+
+        <!-- The whole order form lives in this section -->
+        <section class="order-section">
+            <h2>Order Form</h2> <!-- the main heading of the form -->
+
+            <!-- The two boxes sit side by side: items on the left, order details on the right -->
+            <div class="order-layout">
+
+                <!-- Left box: the item list. It shares the same size and
+                     scrolling rule as the summary box beside it. -->
+                <div class="order-box items-box">
+                    <h3>Choose your item</h3> <!-- heading for the item list -->
+
+                    <!-- Each h4 below starts a new category group -->
+                    <h4 class="order-group">ESPRESSO</h4>
+
+                    <!-- Each label is one clickable row: checkbox, item name, and its price -->
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="biscoff-latte"> <!-- the small tick box -->
+                        <span>Biscoff Latte</span> <!-- the item name shown on screen -->
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="white-mocha-latte">
+                        <span>White Mocha Latte</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="caramel-macchiato">
+                        <span>Caramel Macchiato</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="butterscotch-latte">
+                        <span>Butterscotch Latte</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="sea-salt">
+                        <span>Sea Salt</span>
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="salted-cinnamon">
+                        <span>Salted Cinnamon</span>
+                        <span class="price">₱139</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="americano">
+                        <span>Americano</span>
+                        <span class="price">₱85</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="spanish-latte">
+                        <span>Spanish Latte</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="chocohazelnut-latte">
+                        <span>Chocohazelnut Latte</span>
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="hazelnut-latte">
+                        <span>Hazelnut Latte</span>
+                        <span class="price">₱135</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="spanish-toffee">
+                        <span>Spanish Toffee</span>
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="cinnamon-latte">
+                        <span>Cinnamon Latte</span>
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="salted-caramel">
+                        <span>Salted Caramel</span>
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="mocha">
+                        <span>Mocha</span>
+                        <span class="price">₱119</span>
+                    </label>
+
+                    <!-- next category group -->
+                    <h4 class="order-group">NON – ESPRESSO</h4>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="matcha">
+                        <span>Matcha</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="orea-matcha">
+                        <span>Orea Matcha</span>
+                        <span class="price">₱129</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="strawberry-matcha">
+                        <span>Strawberry Matcha</span>
+                        <span class="price">₱139</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="milky-strawberry">
+                        <span>Milky Strawberry</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="milky-chocolate">
+                        <span>Milky Chocolate</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="milky-biscoff">
+                        <span>Milky Biscoff</span>
+                        <span class="price">₱119</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="milky-oreo">
+                        <span>Milky Oreo</span>
+                        <span class="price">₱119</span>
+                    </label>
+
+                    <!-- next category group -->
+                    <h4 class="order-group">BLENDED</h4>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="oreo">
+                        <span>Oreo</span>
+                        <span class="price">₱145</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="biscoff">
+                        <span>Biscoff</span>
+                        <span class="price">₱149</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="biscoff-hazelnut">
+                        <span>Biscoff Hazelnut</span>
+                        <span class="price">₱159</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="strawberry">
+                        <span>Strawberry</span>
+                        <span class="price">₱149</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="chocolate">
+                        <span>Chocolate</span>
+                        <span class="price">₱149</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="matcha-frappe">
+                        <span>Matcha Frappe</span>
+                        <span class="price">₱149</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="brownie-frappe">
+                        <span>Brownie Frappe</span>
+                        <span class="price">₱179</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="java-chip">
+                        <span>Java Chip</span>
+                        <span class="price">₱159</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="white-mocha">
+                        <span>White Mocha</span>
+                        <span class="price">₱159</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="caramel">
+                        <span>Caramel</span>
+                        <span class="price">₱159</span>
+                    </label>
+
+                    <!-- next category group -->
+                    <h4 class="order-group">SODA</h4>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="green-apple">
+                        <span>Green Apple</span>
+                        <span class="price">₱60</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="watermelon">
+                        <span>Watermelon</span>
+                        <span class="price">₱60</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="mango">
+                        <span>Mango</span>
+                        <span class="price">₱60</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="strawberry">
+                        <span>Strawberry</span>
+                        <span class="price">₱60</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="blueberry">
+                        <span>Blueberry</span>
+                        <span class="price">₱60</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="lychee">
+                        <span>Lychee</span>
+                        <span class="price">₱60</span>
+                    </label>
+
+                    <!-- next category group -->
+                    <h4 class="order-group">SNACKS</h4>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="chicken-poppers">
+                        <span>Chicken Poppers</span>
+                        <span class="price">₱90</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="onion-rings">
+                        <span>Onion Rings</span>
+                        <span class="price">₱80</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="chick-n-fries">
+                        <span>Chick n' Fries</span>
+                        <span class="price">₱165</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="triple-combo">
+                        <span>Triple Combo</span>
+                        <span class="price">₱180</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="flavoured-fries">
+                        <span>Flavoured Fries</span>
+                        <span class="price">₱75</span>
+                    </label>
+
+                    <!-- next category group -->
+                    <h4 class="order-group">SAMYANG</h4>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="samyang-nori">
+                        <span>Samyang + Nori</span>
+                        <span class="price">₱130</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="samyang-nori-cheese">
+                        <span>Samyang + Nori + Cheese</span>
+                        <span class="price">₱155</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="samyang-nori-cheese-hungarian">
+                        <span>Samyang + Nori + Cheese + Hungarian</span>
+                        <span class="price">₱210</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="samyang-nori-cheese-spam">
+                        <span>Samyang + Nori + Cheese + Spam</span>
+                        <span class="price">₱210</span>
+                    </label>
+
+                    <!-- next category group -->
+                    <h4 class="order-group">PASTRIES</h4>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="donut">
+                        <span>Donut</span>
+                        <span class="price">₱75</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="brownie">
+                        <span>Brownie</span>
+                        <span class="price">₱30</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="ensaymada">
+                        <span>Ensaymada</span>
+                        <span class="price">₱40</span>
+                    </label>
+                    <label class="order-item">
+                        <input type="checkbox" name="item" value="cookie">
+                        <span>Cookie</span>
+                        <span class="price">₱40</span>
+                    </label>
+                </div>
+
+                <!-- Right box: the order summary and customer details.
+                     It is the same width and height as the item box. -->
+                <div class="order-box">
+                    <h3>Order Summary</h3> <!-- heading for the right box -->
+
+                    <!-- The total row. The JavaScript below changes this number. -->
+                    <div class="summary-total">
+                        <span>TOTAL PRICE:</span>
+                        <span id="total-price">&mdash;</span>
+                    </div>
+
+                    <!-- The form where the customer types their details -->
+                    <form class="order-form">
+                        <label> <!-- the word Name sits above its text box -->
+                            Name
+                            <input type="text" name="name"> <!-- single-line text field -->
+                        </label>
+                        <label>
+                            Email
+                            <input type="email" name="email"> <!-- email field; checks the format -->
+                        </label>
+                        <label>
+                            Contact Number
+                            <input type="text" name="contact"> <!-- phone number field -->
+                        </label>
+                        <label>
+                            Date
+                            <input type="date" name="date"> <!-- date picker field -->
+                        </label>
+                        <button>Place Order</button> <!-- button that sends the form -->
+                    </form>
+                </div>
+
+            </div> <!-- end of the two-box layout -->
+        </section> <!-- end of the order form section -->
+
+    </main> <!-- end of the cream centre column -->
+
+    <!-- Footer: the brown strip at the very bottom of the page -->
+    <footer>
+        <div class="footer-inner"> <!-- keeps the four footer columns in a row -->
+
+            <div class="logo-col"> <!-- first column: logo and social icons -->
+                <img src="images/Logo.png" class="footer-logo" alt="Rest in Beans Cafe"> <!-- cafe logo -->
+                <div class="socials"> <!-- social media icon links -->
+                    <a href="#"><img src="images/footer/facebook.png" alt="Facebook"></a> <!-- Facebook icon -->
+                    <a href="#"><img src="images/footer/instagram.png" alt="Instagram"></a> <!-- Instagram icon -->
+                </div>
+            </div>
+
+            <div class="footer-col"> <!-- second column: quick page links -->
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </div>
+            <div class="footer-col"> <!-- third column: menu category links -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#espresso">Drinks</a></li>
+                    <li><a href="#snacks">Snacks</a></li>
+                    <li><a href="#pastries">Pastries</a></li>
+                    <li><a href="#samyang">Samyung</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contacts"> <!-- fourth column: contact details -->
+                <h3>Contacts</h3>
+                <ul>
+                    <li>Contact Number : 09515422593</li>
+                    <li>Email Address : alkalinebenniepayer@gmail.com</li>
+                    <li>Address : 2777A Juan Luna St., Tondo, Gagalangin</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript: adds up the prices of the ticked items -->
+    <script>
+        // 1. Find the TOTAL PRICE line and all the item checkboxes
+        const totalPrice = document.getElementById("total-price");
+        const itemCheckboxes = document.querySelectorAll('.order-item input[type="checkbox"]');
+
+        // 2. This function adds up the prices of the boxes that are ticked
+        function updateTotal() {
+            let total = 0;
+
+            itemCheckboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    // The price is the small ₱ text next to the item name
+                    const priceText = checkbox.parentElement.querySelector('.price').textContent;
+                    total += Number(priceText.replace('₱', ''));
+                }
+            });
+
+            totalPrice.textContent = '₱' + total;
+        }
+
+        // 3. Recalculate whenever a checkbox is ticked or unticked
+        itemCheckboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', updateTotal);
+        });
+
+        // 4. Show ₱0 when the page first opens
+        updateTotal();
+    </script>
+
+</body> <!-- end of everything visible on the page -->
+</html> <!-- end of the HTML document -->

@@ -1,0 +1,442 @@
+
+
+/* Padding and borders count inside an element's width,
+   so boxes do not unexpectedly get wider. */
+* { box-sizing: border-box; }
+
+/* The whole page: rem sizes follow the window width but stop at 16px.
+   The background pattern shows at the sides, behind the cream column. */
+html {
+    font-size: min(1vw, 16px);
+    scroll-behavior: smooth; /* any link to a section glides there smoothly */
+    background-color: #f9e8dc; /* cream fallback colour */
+    background-image: url("images/background.png"); /* the edge pattern image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* pattern stays still while the page scrolls */
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none; /* stops phones from resizing text on their own */
+}
+
+/* The page body: a full-height column so the cream area can stretch. */
+body {
+    margin: 0; /* removes the browser's default white border */
+    min-height: 100vh; /* at least as tall as the screen */
+    display: flex; /* enables the top / middle / bottom layout */
+    flex-direction: column; /* stack navbar, main, footer vertically */
+    color: #000; /* default text colour */
+    font-family: "Libre Baskerville", serif; /* default text font */
+}
+
+/* Links: use the same colour as the text and remove the underline. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* The cream centre column:
+   flex:1 fills the space between the top bar and footer;
+   display:flex + align-items:center centre the form vertically;
+   width:100% + max-width:96rem make the column very wide, so only
+   a thin strip of the background pattern shows at the sides;
+   align-self:center keeps that wide column centred on the page. */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    max-width: 86rem;
+    background-color: #f9e8dc;
+}
+
+/* ---------- top bar ---------- */
+/* The brown strip with the logo and the MENU / ABOUT / CONTACTS links. */
+.navbar {
+    height: 6.5rem; /* fixed bar height */
+    padding: 0 1.5rem; /* space at the left and right */
+    display: flex; /* put the logo and links in a row */
+    align-items: center; /* line them up vertically */
+    gap: 2.5rem; /* space between each item */
+    background-color: #aa7a52; /* brown bar colour */
+    border-bottom: 1px solid #5a4030; /* thin dark line under the bar */
+}
+
+/* The logo image inside the top bar. */
+.navbar .logo {
+    height: 5.8rem;
+    display: block;
+}
+
+/* The text links inside the top bar. */
+.navbar a {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Links darken a little when the mouse hovers over them. */
+.navbar a:hover {
+    color: #5c4a3a;
+}
+
+/* ---------- menu sections ---------- */
+/* This styling came from the menu page. The order form overrides the
+   spacing later with .order-section, so there is no extra gap. */
+section {
+    padding: 3.2rem 2rem 0;
+    margin-bottom: 4.5rem;
+}
+
+/* The big handwritten-style heading used on sections. */
+section h2 {
+    margin: 0 0 2.6rem;
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-size: 4.8rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 0.12rem 0.12rem 0 rgba(170, 122, 82, 0.35);
+}
+
+/* ---------- photo cards ---------- */
+/* Four equal columns, each holding one photo and its name */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.8rem 2rem;
+    max-width: 76rem;
+    margin: 0 auto;
+}
+
+/* One card holds a photo and the name under it. */
+.card {
+    text-align: center;
+}
+
+/* The square photo box: a dark block and a soft shadow sit behind it.
+   aspect-ratio keeps the box square; overflow:hidden trims the photo. */
+.photo {
+    width: min(100%, 14rem);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    background-color: #e6cdb8;
+    box-shadow: -0.55rem 0.65rem 0 #8d685c,
+                0 0.9rem 1.8rem rgba(70, 40, 20, 0.28);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* On hover the card lifts slightly and the photo zooms in */
+.card:hover .photo {
+    transform: translateY(-0.5rem);
+    box-shadow: -0.55rem 0.9rem 0 #8d685c,
+                0 1.3rem 2.2rem rgba(70, 40, 20, 0.28);
+}
+
+.card:hover .photo img {
+    transform: scale(1.05);
+}
+
+/* The item name printed under each photo. */
+.name {
+    margin-top: 1.6rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.65rem;
+    line-height: 1.3;
+    color: #2b1b10;
+}
+
+/* ---------- footer ---------- */
+/* The brown strip at the bottom of the page. */
+footer {
+    padding: 2rem 1.5rem;
+    background-color: #a9886c;
+    border-top: 2px solid rgba(60, 35, 15, 0.35);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* The row that holds the four footer columns. */
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* First column: the logo and social icons. */
+.logo-col {
+    text-align: center;
+}
+
+/* The large logo image in the footer. */
+.footer-logo {
+    height: 11rem;
+}
+
+/* The row of social media icons. */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+/* Size of each social icon. */
+.socials img {
+    height: 2.6rem;
+}
+
+/* Heading above each footer list. */
+.footer-col h3 {
+    margin: 0 0 0.8rem;
+    padding-bottom: 0.4rem;
+    font-size: 3rem;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(141, 104, 92, 0.35);
+}
+
+/* Footer lists: remove the default bullet points. */
+.footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.15rem;
+}
+
+/* Space between the lines in a footer list. */
+.footer-col li {
+    margin-bottom: 0.6rem;
+}
+
+/* The contacts column is wider so long addresses fit. */
+.contacts {
+    width: 30rem;
+}
+
+/* ---------- tablets: three columns, no hover movement ---------- */
+/* These rules only run on medium screens (701px to 1000px wide). */
+@media (min-width: 701px) and (max-width: 1000px) 
+{
+    .cards {grid-template-columns: repeat(3, 1fr);}
+
+    .card:hover .photo,
+    .card:hover .photo img {transform: none;} /* stops the lift/zoom effect on tablets */    
+}
+
+/* ---------- phones: smaller text, two columns ---------- */
+/* These rules only run on small screens (700px wide or less). */
+@media (max-width: 700px) {
+    html { font-size: 1.9vw; }
+
+    .navbar { padding: 0 0.8rem; gap: 1.5rem; }
+    .navbar .logo { height: 5rem; }
+    .navbar a { font-size: 1.8rem; }
+
+    section { padding: 1.8rem 1rem 0; margin-bottom: 3rem; }
+    section h2 { margin-bottom: 1.8rem; font-size: 3.2rem; letter-spacing: 0.15rem; }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem 1.2rem;
+    }
+
+    .photo {
+        border-radius: 1rem;
+        box-shadow: -0.4rem 0.5rem 0 #8d685c,
+                    0 0.6rem 1.2rem rgba(70, 40, 20, 0.28);
+    }
+
+    /* no hover movement on touch screens */
+    .card:hover .photo,
+    .card:hover .photo img {transform: none;}
+
+    .name {margin-top: 1.1rem; font-size: 1.3rem;}
+
+    footer {padding: 1.2rem 0.8rem;}
+    .footer-inner {flex-wrap: wrap; gap: 1.5rem;}
+    .footer-logo {height: 7rem;}
+    .socials img {height: 2rem;}
+    .contacts {width: 17rem;}
+}
+
+/* =========================================================
+   ---------- ORDER FORM STYLES ----------
+   Everything below styles the order form. The page above
+   keeps the menu design; these rules do not change it.
+   ========================================================= */
+
+/* The section holding the whole form.
+   width:100% fills the cream column; the auto margins centre it,
+   and the bottom margin leaves a gap before the footer. */
+.order-section {
+    width: 100%;
+    margin: auto auto 3rem;
+}
+
+/* Styling for an intro sentence, if one is added later.
+   The negative top margin pulls it closer to the heading. */
+.order-intro {
+    margin: -1.5rem 0 2.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    color: #2b1b10;
+}
+
+/* The two boxes: one for items, one for order details.
+   display:grid makes the two columns the same width; align-items:stretch
+   lets both boxes share the same height. On phones the media query
+   below turns this into one column, so both boxes are still equal. */
+.order-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 2.5rem;
+    max-width: 60rem; /* keeps the form narrower than the cream column */
+    margin: 0 auto; /* centres the two boxes as a group */
+    text-align: left;
+}
+
+/* A rounded, lightly-bordered card used for BOTH boxes.
+   height:56vh gives each box the same height on every device,
+   while leaving room for the gap above the footer.
+   overflow-y:auto keeps long content (items or fields) inside
+   the box with its own scrollbar instead of spilling out. */
+.order-box {
+    height: 56vh;
+    padding: 2rem;
+    overflow-y: auto;
+    border: 1px solid rgba(141, 104, 92, 0.35);
+    border-radius: 1.2rem;
+    background-color: #f9ebe0;
+}
+
+/* The handwritten-style heading at the top of each box. */
+.order-box h3 {
+    margin: 0 0 1.6rem;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+/* The left card still has this class in the HTML so it is easy to spot.
+   Its height and scrolling now come from the shared .order-box rules,
+   so it always matches the summary box exactly. */
+.items-box {
+    /* no extra size rules needed */
+}
+
+/* One menu item row: checkbox, name, then price on the far right.
+   display:flex arranges them in a row; the border makes a divider. */
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(141, 104, 92, 0.25);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+}
+
+/* The small tick box itself, coloured to match the cafe theme. */
+.order-item input {
+    width: 1.6rem;
+    height: 1.6rem;
+    accent-color: #aa7a52;
+}
+
+/* The price on the right of each item.
+   margin-left:auto pushes it to the far edge of the row. */
+.order-item .price {
+    margin-left: auto;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Category heading inside the item list (ESPRESSO, BLENDED, etc.). */
+.order-group {
+    margin: 1.6rem 0 0.4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #8d685c;
+    letter-spacing: 0.1rem;
+}
+
+/* The TOTAL PRICE line: label on the left, value on the right. */
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #8d685c;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* The customer details form: a vertical stack of fields. */
+.order-form {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* Each label sits above its field; display:grid stacks them. */
+.order-form label {
+    display: grid;
+    gap: 0.4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3rem;
+    color: #2b1b10;
+}
+
+/* The look of every text, email and date field. */
+.order-form input,
+.order-form select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(141, 104, 92, 0.4);
+    border-radius: 0.6rem;
+    background-color: #fffaf5;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    color: #2b1b10;
+}
+
+/* The Place Order button. */
+.order-form button {
+    margin-top: 0.6rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.6rem;
+    background-color: #aa7a52;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer; /* shows a hand pointer on hover */
+}
+
+/* Button darkens when the mouse hovers over it. */
+.order-form button:hover {
+    background-color: #8d685c;
+}
+
+/* Phones only: put the two boxes one above the other.
+   They keep the SAME 56vh height from .order-box above, and both
+   become the full width of the single column, so they still match. */
+@media (max-width: 700px) {
+    .order-layout { grid-template-columns: 1fr; gap: 1.6rem; }
+    .order-box { padding: 1.4rem; }
+    .order-box h3 { font-size: 2rem; }
+    .order-item { font-size: 1.4rem; }
+}
